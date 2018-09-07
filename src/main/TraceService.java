@@ -27,10 +27,8 @@ public class TraceService {
             List<Trace> traces = new ArrayList<Trace>();
             Trace trace;
 
-            String app;
             for (int i=0; i<rawTraces.size(); i++) {
                 trace = tracer.parseTrace(rawTraces.get(i));
-                app = trace.getApp();
                 traces = tracer.convertTraces(traces, trace);
             }
 
